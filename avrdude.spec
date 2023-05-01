@@ -35,7 +35,7 @@ BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	texi2html
 BuildRequires:	texinfo
 BuildRequires:	texlive
-BuildRequires:	texlive-texinfo
+#BuildRequires:	texlive-texinfo
 BuildRequires:	texlive-dvips
 BuildRequires:	texlive-latex
 BuildRequires:	texlive-context
@@ -113,33 +113,7 @@ texhash
 	-DHAVE_PARPORT:BOOL=%{?with_parport:ON}%{!?with_parport:OFF} \
 	-DUSE_EXTERNAL_LIBS:BOOL=OFF \
 	-GNinja
-%ninja_build -v || :
-
-cd ..
-echo "=========="
-find . -name "*.log"
-echo "=========="
-find . -name "*.log" |while read r; do
-       echo "================================"
-       echo $r
-       cat $r
-done
-
-cd /builddir/.texlive2013/texmf-var/web2c
-echo "====="
-find .
-echo "====="
-for i in $(find . -type f); do
-       echo "===================="
-       echo $i
-       cat $i
-done
-
-ls -l /usr/share/texmf-dist/metafont/config/mf.ini
-rpm -qf /usr/share/texmf-dist/metafont/config/mf.ini
-
-ls -l /usr/share/texmf-dist/fonts/source/public/modes/modes.mf
-rpm -qf /usr/share/texmf-dist/fonts/source/public/modes/modes.mf
+%ninja_build 
 
 %install
 %ninja_install -C build
