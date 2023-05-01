@@ -101,7 +101,6 @@ This package provides development files for %{name} sharedlibs.
 
 %prep
 %autosetup -p1
-texhash
 
 %build
 %cmake \
