@@ -1,0 +1,32 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -300,7 +300,7 @@ install(TARGETS libavrdude
+     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+     PUBLIC_HEADER DESTINATION include COMPONENT dev
+     )
+-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/avrdude.conf" TYPE SYSCONF)
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/avrdude.conf" DESTINATION /etc)
+ install(FILES "avrdude.1"
+ 	DESTINATION "${CMAKE_INSTALL_MANDIR}/man1"
+ 	)
+--- a/src/avrdude.1
++++ b/src/avrdude.1
+@@ -404,7 +404,7 @@
+ .Nm avrdude
+ knows about.
+ See the config file, located at
+-.Pa ${PREFIX}/etc/avrdude.conf ,
++.Pa /etc/avrdude.conf ,
+ which contains a description of the format.
+ .Pp
+ If 
+@@ -1475,7 +1475,7 @@
+ .Pa ../etc/ ,
+ relative to the path of the executable, then in the same directory as
+ the executable itself, and finally in the system default location
+-.Pa ${PREFIX}/etc/avrdude.conf .
++.Pa /etc/avrdude.conf .
+ .It Pa ${XDG_CONFIG_HOME}/avrdude/avrdude.rc
+ Local programmer and parts configuration file (per-user overrides); it follows the same syntax as
+ .Pa avrdude.conf ;
+

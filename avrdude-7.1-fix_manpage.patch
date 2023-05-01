@@ -1,0 +1,11 @@
+--- a/src/avrdude.1
++++ b/src/avrdude.1
+@@ -1490,7 +1490,7 @@
+ Initialization file for the
+ .Xr readline 3
+ library
+-.It Pa <prefix>/doc/avrdude/avrdude.pdf
++.It Pa /usr/share/doc/avrdude/avrdude.pdf
+ User manual
+ .El
+ .\" .Sh EXAMPLES
