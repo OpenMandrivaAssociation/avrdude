@@ -33,8 +33,9 @@ BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libftdi1)
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	texi2html
-BuildRequires:	texlive-texinfo
+BuildRequires:	texinfo
 BuildRequires:	texlive
+BuildRequires:	texlive-texinfo
 BuildRequires:	texlive-dvips
 BuildRequires:	texlive-latex
 BuildRequires:	texlive-context
