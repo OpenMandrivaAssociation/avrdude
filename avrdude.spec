@@ -1,4 +1,4 @@
-%define _disable_ld_no_undefined 1
+#define _disable_ld_no_undefined 1
 
 %define major 1
 %define libname %mklibname %{name}
@@ -21,7 +21,7 @@ Source0:	https://github.com/avrdudes/avrdude/archive/v%{version}/%{name}-%{versi
 # (debian)
 Source1:	com.github.avrdudes.avrdude.metainfo.xml
 Patch0:		avrdude-7.1-fix_config_path.patch
-Patch1:		fix-paths-in-the-man-page.patch
+Patch1:		avrdude-7.1-fix_manpage.patch
 
 BuildRequires:	flex
 BuildRequires:	bison
