@@ -12,7 +12,7 @@
 
 Summary:	Software for programming Atmel AVR Microcontroller
 Name:		avrdude
-Version:	7.1
+Version:	7.2
 Release:	1
 Group:		Development/Other
 License:	GPLv2+
