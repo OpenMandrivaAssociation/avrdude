@@ -19,7 +19,7 @@
 +.Pa /etc/avrdude.conf ,
  which contains a description of the format.
  .Pp
- If 
+ If
 @@ -1475,7 +1475,7 @@
  .Pa ../etc/ ,
  relative to the path of the executable, then in the same directory as

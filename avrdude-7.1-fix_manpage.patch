@@ -4,7 +4,7 @@
  Initialization file for the
  .Xr readline 3
  library
--.It Pa <prefix>/doc/avrdude/avrdude.pdf
+-.It Pa <prefix>/share/doc/avrdude/avrdude.pdf
 +.It Pa /usr/share/doc/avrdude/avrdude.pdf
  User manual
  .El

@@ -12,7 +12,7 @@
 
 Summary:	Software for programming Atmel AVR Microcontroller
 Name:		avrdude
-Version:	7.3
+Version:	8.0
 Release:	1
 Group:		Development/Other
 License:	GPLv2+
@@ -28,10 +28,15 @@ BuildRequires:	bison
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(hidapi-hidraw)
 BuildRequires:	pkgconfig(libelf)
+BuildRequires:	pkgconfig(libftdi1)
+BuildRequires:	pkgconfig(libserialport)
 BuildRequires:	pkgconfig(libusb)
 BuildRequires:	pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(libftdi1)
 BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(gpiod)
+BuildRequires:	swig
 BuildRequires:	texi2html
 BuildRequires:	texinfo
 BuildRequires:	texlive
@@ -54,6 +59,10 @@ particular chip.
 %doc %{_docdir}/%{name}/%{name}.{dvi,pdf,ps}
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 %{_bindir}/%{name}
+%{_bindir}/%{name}-gui
+%{_bindir}/elf2tag
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*
 %{_mandir}/man1/%{name}.1*
 %{_infodir}/%{name}.info*
 %{_metainfodir}/*.metainfo.xml
