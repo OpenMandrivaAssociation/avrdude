@@ -40,7 +40,7 @@ BuildRequires:	swig
 BuildRequires:	texi2html
 BuildRequires:	texinfo
 BuildRequires:	texlive
-#BuildRequires:	texlive-texinfo
+BuildRequires:	texlive-texinfo
 BuildRequires:	texlive-dvips
 BuildRequires:	texlive-latex
 BuildRequires:	texlive-context
