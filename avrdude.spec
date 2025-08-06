@@ -40,10 +40,10 @@ BuildRequires:	swig
 BuildRequires:	texi2html
 BuildRequires:	texinfo
 BuildRequires:	texlive
-BuildRequires:	texlive-texinfo
-BuildRequires:	texlive-dvips
-BuildRequires:	texlive-latex
-BuildRequires:	texlive-context
+#BuildRequires:	texlive-texinfo
+#BuildRequires:	texlive-dvips
+#BuildRequires:	texlive-latex
+#BuildRequires:	texlive-context
 
 %description
 AVRDUDE is a program for programming Atmel's AVR CPU's. It can program the 
