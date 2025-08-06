@@ -4,15 +4,15 @@
 %define libname %mklibname %{name}
 %define devname %mklibname %{name} -d
 
-%bcond_without	doc
-%bcond_without	linuxgpio
-%bcond_without	linuxspi
-%bcond_without	parport
-%bcond_with	sharedlibs
+%bcond doc		1
+%bcond linuxgpio	1
+%bcond linuxspi		1
+%bcond parport		1
+%bcond sharedlibs	0
 
 Summary:	Software for programming Atmel AVR Microcontroller
 Name:		avrdude
-Version:	8.0
+Version:	8.1
 Release:	1
 Group:		Development/Other
 License:	GPLv2+
@@ -28,7 +28,7 @@ BuildRequires:	bison
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(hidapi-hidraw)
 BuildRequires:	pkgconfig(libelf)
-BuildRequires:	pkgconfig(libftdi1)
+BuildRequires:	pkgconfig(libftdi1) python-libftdi
 BuildRequires:	pkgconfig(libserialport)
 BuildRequires:	pkgconfig(libusb)
 BuildRequires:	pkgconfig(libusb-1.0)
